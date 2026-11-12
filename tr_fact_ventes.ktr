@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>tr_fact_ventes</name>
+    <description>Exercice 2.3 : Chargement de la Table de Faits (dw.fact_ventes) avec RG-01 et RG-02</description>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field>
+        <field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field>
+        <field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field>
+        <field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field>
+        <field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field>
+        <field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field>
+        <field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field>
+        <field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field>
+        <field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field>
+        <field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field>
+        <field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field>
+        <field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field>
+        <field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field>
+        <field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field>
+        <field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field>
+        <field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field>
+        <field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field>
+        <field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field>
+        <field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field>
+        <field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field>
+        <field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field>
+        <field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field>
+        <field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field>
+        <field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field>
+        <field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field>
+        <field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field>
+        <field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field>
+        <field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field>
+        <field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field>
+        <field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field>
+        <field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field>
+        <field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field>
+        <field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field>
+        <field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field>
+        <field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field>
+        <field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field>
+        <field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field>
+        <field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field>
+        <field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field>
+        <field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field>
+        <field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field>
+        <field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field>
+        <field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field>
+        <field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field>
+        <field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field>
+        <field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field>
+        <field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field>
+        <field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field>
+        <field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field>
+        <field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field>
+        <field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field>
+        <field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field>
+        <field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field>
+        <field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field>
+        <field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field>
+        <field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field>
+        <field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field>
+        <field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field>
+        <field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field>
+        <field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field>
+        <field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field>
+        <field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field>
+        <field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field>
+        <field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field>
+        <field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field>
+        <field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2026/10/08 12:00:00.000</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2026/10/08 12:00:00.000</modified_date>
+    <key_for_session_key/>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>datawarehouse</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>datawarehouse</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ff228dc6fa8c</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>1. CSV Input - stg_ventes.csv</from>
+      <to>2a. Database lookup - dw.dim_client</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>2a. Database lookup - dw.dim_client</from>
+      <to>2b. Database lookup - dw.dim_produit</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>2b. Database lookup - dw.dim_produit</from>
+      <to>3. Calculs Metriques, Date YYYYMMDD, RG-01 et RG-02 (JS)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>3. Calculs Metriques, Date YYYYMMDD, RG-01 et RG-02 (JS)</from>
+      <to>4. Table output - dw.fact_ventes</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>1. CSV Input - stg_ventes.csv</name>
+    <type>CsvInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <filename>${Internal.Entry.Current.Directory}/stg_ventes.csv</filename>
+    <filename_field/>
+    <rownum_field/>
+    <include_filename>N</include_filename>
+    <separator>,</separator>
+    <enclosure>"</enclosure>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>N</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <format>mixed</format>
+    <encoding>UTF-8</encoding>
+    <fields>
+      <field><name>id_commande</name><type>String</type><format/><currency/><decimal>.</decimal><group>,</group><length>50</length><precision>-1</precision><trim_type>both</trim_type></field>
+      <field><name>date_commande</name><type>String</type><format/><currency/><decimal>.</decimal><group>,</group><length>20</length><precision>-1</precision><trim_type>both</trim_type></field>
+      <field><name>client_id</name><type>String</type><format/><currency/><decimal>.</decimal><group>,</group><length>50</length><precision>-1</precision><trim_type>both</trim_type></field>
+      <field><name>produit_id</name><type>String</type><format/><currency/><decimal>.</decimal><group>,</group><length>50</length><precision>-1</precision><trim_type>both</trim_type></field>
+      <field><name>quantite</name><type>Integer</type><format>#</format><currency/><decimal>.</decimal><group>,</group><length>15</length><precision>0</precision><trim_type>both</trim_type></field>
+      <field><name>prix_facture</name><type>Number</type><format>#.#</format><currency/><decimal>.</decimal><group>,</group><length>10</length><precision>2</precision><trim_type>both</trim_type></field>
+      <field><name>remise_pct</name><type>Number</type><format>#.#</format><currency/><decimal>.</decimal><group>,</group><length>10</length><precision>2</precision><trim_type>both</trim_type></field>
+      <field><name>qte_par_pack</name><type>Integer</type><format>#</format><currency/><decimal>.</decimal><group>,</group><length>15</length><precision>0</precision><trim_type>both</trim_type></field>
+      <field><name>mode_livraison</name><type>String</type><format/><currency/><decimal>.</decimal><group>,</group><length>50</length><precision>-1</precision><trim_type>both</trim_type></field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps><input/><output/></remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>2a. Database lookup - dw.dim_client</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>datawarehouse</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>dw</schema>
+      <table>dim_client</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>client_id</name>
+        <field>code_client_bk</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id_client_sk</name>
+        <rename>id_client_sk</rename>
+        <default>-1</default>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps><input/><output/></remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>2b. Database lookup - dw.dim_produit</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>datawarehouse</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>dw</schema>
+      <table>dim_produit</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>produit_id</name>
+        <field>ref_produit_bk</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id_produit_sk</name>
+        <rename>id_produit_sk</rename>
+        <default>-1</default>
+        <type>Integer</type>
+      </value>
+      <value>
+        <name>diagonale_pouces</name>
+        <rename>diagonale_pouces</rename>
+        <default/>
+        <type>Number</type>
+      </value>
+      <value>
+        <name>ratio_ecran</name>
+        <rename>ratio_ecran</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>longueur_std_cm</name>
+        <rename>longueur_std_cm</rename>
+        <default/>
+        <type>Number</type>
+      </value>
+      <value>
+        <name>largeur_std_cm</name>
+        <rename>largeur_std_cm</rename>
+        <default/>
+        <type>Number</type>
+      </value>
+      <value>
+        <name>hauteur_std_cm</name>
+        <rename>hauteur_std_cm</rename>
+        <default/>
+        <type>Number</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps><input/><output/></remotesteps>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>3. Calculs Metriques, Date YYYYMMDD, RG-01 et RG-02 (JS)</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>// 1. Formatage de la date au format entier YYYYMMDD (id_temps_sk)
+var id_temps_sk = parseInt(date_commande.replace(/-/g, ""), 10);
+
+// 2. RG-01 : Normalisation du prix unitaire et depaquetage des Packs
+var nbre_packs = quantite;
+var pack_size = (qte_par_pack != null &amp;&amp; qte_par_pack > 0) ? qte_par_pack : 1;
+var qte_unitaire_totale = nbre_packs * pack_size;
+var prix_unitaire_effectif = Math.round((prix_facture / pack_size) * 100) / 100;
+
+// 3. Calculs des metriques financieres
+var montant_brut = Math.round((nbre_packs * prix_facture) * 100) / 100;
+var montant_remise = Math.round((montant_brut * (remise_pct / 100.0)) * 100) / 100;
+var montant_net = Math.round((montant_brut - montant_remise) * 100) / 100;
+
+// 4. RG-02 : Calcul geometrique des dimensions de colis pour la livraison
+var colis_longueur_cm = 0.0;
+var colis_largeur_cm  = 0.0;
+var colis_hauteur_cm  = 0.0;
+var colis_volume_cm3  = 0.0;
+
+if (mode_livraison == "LIVRAISON_DOMICILE") {
+    if (diagonale_pouces != null &amp;&amp; diagonale_pouces > 0 &amp;&amp; ratio_ecran != null &amp;&amp; ratio_ecran.indexOf("/") != -1) {
+        // Cas particulier des Ecrans / Moniteurs
+        var parts = ratio_ecran.split("/");
+        var num = parseFloat(parts[0]);
+        var den = parseFloat(parts[1]);
+        var D_cm = diagonale_pouces * 2.54;
+        colis_longueur_cm = Math.round((D_cm * Math.sqrt(num / (num + den))) * 100) / 100;
+        colis_hauteur_cm  = Math.round((D_cm * Math.sqrt(den / (num + den))) * 100) / 100;
+        colis_largeur_cm  = 15.0;
+    } else {
+        // Produits standards
+        colis_longueur_cm = (longueur_std_cm != null) ? longueur_std_cm : 0.0;
+        colis_largeur_cm  = (largeur_std_cm != null)  ? largeur_std_cm  : 0.0;
+        colis_hauteur_cm  = (hauteur_std_cm != null)  ? hauteur_std_cm  : 0.0;
+    }
+    colis_volume_cm3 = Math.round((colis_longueur_cm * colis_largeur_cm * colis_hauteur_cm) * 100) / 100;
+}
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field><name>id_temps_sk</name><rename>id_temps_sk</rename><type>Integer</type><length>9</length><precision>0</precision><replace>N</replace></field>
+      <field><name>nbre_packs</name><rename>nbre_packs</rename><type>Integer</type><length>9</length><precision>0</precision><replace>N</replace></field>
+      <field><name>qte_unitaire_totale</name><rename>qte_unitaire_totale</rename><type>Integer</type><length>9</length><precision>0</precision><replace>N</replace></field>
+      <field><name>prix_unitaire_effectif</name><rename>prix_unitaire_effectif</rename><type>Number</type><length>10</length><precision>2</precision><replace>N</replace></field>
+      <field><name>montant_brut</name><rename>montant_brut</rename><type>Number</type><length>10</length><precision>2</precision><replace>N</replace></field>
+      <field><name>montant_remise</name><rename>montant_remise</rename><type>Number</type><length>10</length><precision>2</precision><replace>N</replace></field>
+      <field><name>montant_net</name><rename>montant_net</rename><type>Number</type><length>10</length><precision>2</precision><replace>N</replace></field>
+      <field><name>colis_longueur_cm</name><rename>colis_longueur_cm</rename><type>Number</type><length>6</length><precision>2</precision><replace>N</replace></field>
+      <field><name>colis_largeur_cm</name><rename>colis_largeur_cm</rename><type>Number</type><length>6</length><precision>2</precision><replace>N</replace></field>
+      <field><name>colis_hauteur_cm</name><rename>colis_hauteur_cm</rename><type>Number</type><length>6</length><precision>2</precision><replace>N</replace></field>
+      <field><name>colis_volume_cm3</name><rename>colis_volume_cm3</rename><type>Number</type><length>12</length><precision>2</precision><replace>N</replace></field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps><input/><output/></remotesteps>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>4. Table output - dw.fact_ventes</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>datawarehouse</connection>
+    <schema>dw</schema>
+    <table>fact_ventes</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field><column_name>id_client_sk</column_name><stream_name>id_client_sk</stream_name></field>
+      <field><column_name>id_produit_sk</column_name><stream_name>id_produit_sk</stream_name></field>
+      <field><column_name>id_temps_sk</column_name><stream_name>id_temps_sk</stream_name></field>
+      <field><column_name>id_commande_bk</column_name><stream_name>id_commande</stream_name></field>
+      <field><column_name>mode_livraison</column_name><stream_name>mode_livraison</stream_name></field>
+      <field><column_name>nbre_packs</column_name><stream_name>nbre_packs</stream_name></field>
+      <field><column_name>qte_par_pack</column_name><stream_name>qte_par_pack</stream_name></field>
+      <field><column_name>qte_unitaire_totale</column_name><stream_name>qte_unitaire_totale</stream_name></field>
+      <field><column_name>prix_unitaire_effectif</column_name><stream_name>prix_unitaire_effectif</stream_name></field>
+      <field><column_name>montant_brut</column_name><stream_name>montant_brut</stream_name></field>
+      <field><column_name>montant_remise</column_name><stream_name>montant_remise</stream_name></field>
+      <field><column_name>montant_net</column_name><stream_name>montant_net</stream_name></field>
+      <field><column_name>colis_longueur_cm</column_name><stream_name>colis_longueur_cm</stream_name></field>
+      <field><column_name>colis_largeur_cm</column_name><stream_name>colis_largeur_cm</stream_name></field>
+      <field><column_name>colis_hauteur_cm</column_name><stream_name>colis_hauteur_cm</stream_name></field>
+      <field><column_name>colis_volume_cm3</column_name><stream_name>colis_volume_cm3</stream_name></field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps><input/><output/></remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+  <attributes/>
+</transformation>

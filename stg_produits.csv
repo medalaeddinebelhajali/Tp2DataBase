@@ -1,0 +1,10 @@
+produit_id,nom_produit,id_categorie,prix_unitaire,statut_catalogue,diagonale_pouces,ratio_ecran,longueur_std_cm,largeur_std_cm,hauteur_std_cm
+P001,Ecran 27 pouces 4K,20,250.00,ACTIF,27.0,16/9,,,
+P002, Clavier Mecanique RGB ,20,89.90,ACTIF,,,45.0,15.0,4.0
+P003,Chaise Ergonomique,30,199.00,ACTIF,,,65.0,65.0,110.0
+P004,Stylo Bille Bleu,40,1.50,ACTIF,,,15.0,5.0,2.0
+P005,Cable HDMI 2m HighSpeed,,12.00,ACTIF,,,20.0,15.0,3.0
+P006,Souris Sans Fil Ergonomique,99,29.99,ACTIF,,,12.0,8.0,5.0
+P007,Bureau Reglable Electrique,30,450.00,OBSOLETE,,,140.0,70.0,15.0
+P008,Cle USB 32Go HighSpeed,20,15.00,ACTIF,,,10.0,5.0,2.0
+P009,Ecran Gaming 24 pouces,20,180.00,ACTIF,24.0,16/9,,,
